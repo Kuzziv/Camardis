@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>camardis.com is hosted by Simply.com</title>
+    <meta name="description" content="camardis.com is hosted by Simply.com. Check out www.simply.com.">
+    <meta name="robots" content="follow, noarchive, nosnippet">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link href="//splash.simply.com/splash.css" rel="stylesheet" media="all">
+    <meta property="og:image" content="https://splash.simply.com/social.png">
+    <meta property="og:type" content="website">
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+</head>
+<body>
+ 
+    <div id="app">
+        <h1>{{ message }}</h1>
+
+        <!-- Import carAPI.js -->
+        <car-api></car-api>
+
+    </div>
+
+    <!-- Import App -->
+    <script src="main.js"></script>
+
+    <!-- Import Component -->
+    <script src="./components/carAPI.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+    
+<script>
+    try {
+        var el = document.getElementById('tagline');
+        var tagline = el.innerHTML;
+        el.innerHTML = tagline.replace('camardis.com', window.location.host);
+    } catch (err) {
+        console.log(err);
+    }
+</script>
+</body>
+</html>
